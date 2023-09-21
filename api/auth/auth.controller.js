@@ -24,6 +24,8 @@ module.exports = {
                     password: results.password,
                     token: jsonToken 
                 }));
+            } else {
+                return res.status(500).send(JSON.stringify({ success: false, info: "login not successfully" }));
             }
         });
 
